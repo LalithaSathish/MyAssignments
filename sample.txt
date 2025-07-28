@@ -1,0 +1,10 @@
+Feature="Feature file path",glue=StepDefinition.java,public=1
+static main(){
+
+}
+
+File f=new File("File path");
+Fileutils.readlines(f);
+
+
+https://github.com/selenium-cucumber/selenium-cucumber-java/tree/master/src

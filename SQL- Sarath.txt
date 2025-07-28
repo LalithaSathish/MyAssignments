@@ -1,0 +1,1113 @@
+IPT - Interview Preparation Training:
+===============================
+Database - Oracle Db - SQL
+GIT & GITHUB 
+Xpath Axes & Dynamic Xpath
+Css Selector
+Broken Links
+Logical Program
+Enumeration, Iterator, List Iterator
+Jenkins
+==========================================
+Broken Links:
+============
+div
+input - text box
+button - button
+img  - Image
+select - DropDown
+p - paragraph
+ul - Unordered list 
+li - Ordered List
+a - Link
+
+Broken links are links present in the webpage but not working 
+Link may have expired
+Content would be removed by server
+Link may be incorrect or misspelled
+
+Step 1: Launch any URL
+
+Step 2: Find all the links present in the webpage
+	List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+
+Step 3: Iterate to get individual link
+	
+Step 4: Get the attribute value for the attribute href.
+
+Step 5: Convert the String form of URL into URL
+
+Step 6: Create a connection for URL
+
+Step 7: Determine the response code for URL
+
+	200 - 299 - Valid Response
+	300 - 399 - Redirectional Link
+	400 - 499 - Client Side Error
+	500 - 599 - Server Side Error
+
+Step 8: If response code != 200 series then that is a broken link
+
+
+SQL 
+===
+Structured Query Language
+
+> User can store the data, retrieve the data and manipulate the data in database
+
+>DataBase	: oraclaDB, MySQL, MONGODB, github, gdrive
+>Language	: SQL/PLSQL(SQL - Program  - Syntax - Query)
+>Tool		: ISQLPLUS, SQLPLUS, Toad
+>Version	: 10g, 19c
+
+>Any query through Browser is called ISQLPLUS			
+
+> Any Query through cmd is called as SQLPLUS
+
+> To run through cmd: sqlplus username/password
+
+Installation of oracle Db:
+=========================
+Step 1: Download Oracle Db and install.
+	Link Click - Google Drive - File Download - Extract - Oracle XE - oracle application file- RC - Run As Administrator
+
+Step 2: During installation 
+	Password : abc
+       C.Password: abc
+
+Step 3: Go to Start - Type 
+	Go to Database Homepage - Open
+
+Step 4: Username: sys (admin username to unlock the HR username)
+	Password: abc
+
+step 5: Administration - Database Users - HR - Password: abc
+					       C.Password: abc
+	Change the Account Status - unlocked
+
+	User privilages Enable all checkbox
+
+Step 6: Click on Alter User
+
+Step 7: Logout and Login again using Hr username
+
+Basic Queries
+--------------
+*-- to print all the column data from a table
+,--more than one column
+
+Eg: Select * from Employees
+
+Select		-- clause - To mention the column name 
+from		-- clause - To mention the Table name
+Employees	-- tablename
+
+> SQL is not case sensitive but the data is case sensitive
+
+> order by : arrange the data in asc/desc
+
+	   : default it will arrange in Asc
+
+Select * from Employees
+
+SELECT * FROM EMPLOYEES
+
+Select first_name from Employees
+
+Select first_name, last_name from Employees
+
+Select * from Employees order by first_name asc
+
+Select * from Employees order by first_name desc
+
+where - clause - column name
+      - to filter the data based on the conditions.
+
+Relational Operators
+====================
+>			: greater than
+<			: lesser than
+distinct/unique		: uncommon
+null			: null
+between			: comparing, range
+as			: alias(Renaming)
+''			: literal string
+||			: Concatination symbol
+like			: same(Pattern Matching)
+dual			: dummy table
+in			: to print more than one data
+
+
+Select * from Employees where salary > 15000
+
+Select * from Employees where salary < 5000
+
+Select distinct(first_name) from Employees
+
+Select * from Employees where commission_pct is NULL
+
+Select * from Employees where commission_pct is not NULL
+
+Select * from Employees where salary between 5000 and 10000
+
+Select first_name as PrimaryName, last_name as SecondaryName from Employees
+
+Select * from Employees where first_name = 'David'
+
+Select first_name||'@'||last_name from Employees
+
+Select * from Employees where first_name like 'A%'
+
+Select * from Employees where first_name like '%n'
+
+Select * from Employees where first_name like 'A%n'
+
+Select * from Employees where first_name like '_a%n'
+
+Select * from Employees where first_name in ('David', 'Steven', 'Lex')
+
+Operators(More than One Condition)
+==========
+AND--- both the conditions are satisfied
+OR--- any one condition is satisfied
+
+Select * from Employees where first_name = 'David' AND salary < 5000
+
+Select * from Employees where first_name = 'David' OR salary < 5000
+
+Group by Functions or Aggregate Functions
+=========================================
+min
+max	
+sum
+avg
+count
+
+> To give conditions in the group by functions use having(conditions)
+
+A Query contains both group by column and non group by column then group by clause must be included and non group by  column to be added to the clause
+
+Group by - having (clause)
+
+Select min(salary) from Employees
+
+Select max(salary) from Employees
+
+Select count(salary) from Employees
+
+Select sum(salary) from Employees
+
+Select avg(salary) from Employees
+
+
+Select min(salary), max(salary), sum(salary), count(salary), avg(salary) from Employees
+
+Select first_name, min(salary) from Employees group by first_name
+
+Select first_name, min(salary) from Employees group by first_name having first_name ='David'
+ 
+
+
+
+Analytical Functions
+--------------------
+(i)rank()-- if duplicates are there it skips 
+
+(ii) dense_rank()-- if duplicates are there it wont skip
+
+> Analytical functions are used then the query will contain over()
+
+//Sub Query - Query inside one more query 
+
+Task: To print 10th max salary
+
+With E as (Select first_name, last_name, salary, dense_rank() over(order by salary desc) as RANK from Employees)
+Select * from E where RANK = 4;
+
+TO CREATE A TABLE
+==================
+Datatype
+=========
+number 		:38 digit
+char 		:2k(String also)--It wont release the memory----known length	
+varchar 	:4k---------------It will release the memory----Unlknown length	 
+long 		:2GB	
+Date 		:date
+timestamp 	:date+time
+
+constraints
+============
+Enforce rule on a table
+
+primarykey 
+unique
+Not null
+Check
+Foreign key
+
+primary key
+===========
+>Entity Integrity(Rule - Applied for Entire Table)
+>It ignore null values and Duplivcate values
+>Only one primary key accept in table
+>It automatically generate unique index
+>It is given for only one column
+
+Unique
+=======
+>Entity integrity
+>It ignore Duplicate values and accept one null values
+>It automatically generate unique box
+
+Not null:
+=========
+It is a domain integrity(Rule - Specific Column)
+It ignore null values
+
+Check
+======
+It is a domain integrity
+It should satisfy the condition 
+
+Foreign key
+=============
+It is a referential integrity
+It refers the primary key or unique constraints column of an a another table
+It accept null values and duplicates
+
+Foreign key Example:
+
+Table 1:
+Course			Cid - Primary key
+cid	cname
+10	java
+20	sql
+30	plsql
+
+Table 2:
+Students		Cid - Foreign key
+sid	name	cid
+1	vel	20
+2	bala	10
+3	mani	30
+
+After applying Foreign key
+sid	name	cname
+1	Vel	sql
+2	bala	java
+3	mani	plsql
+
+
+To create table
+---------------
+Step 1: Mention the table name
+
+Step 2: Mention the column  name
+
+Step 3: Mention the data type
+
+Step 4: Mention the constraints
+
+
+
+
+Eg:
+create tableName
+columnName Datatype constraint
+
+OR
+
+constraint constraintname constrainttype(column name)
+
+
+
+
+Eg: 
+create table Coursess1(
+cid number(4),
+cname varchar(20) not null,
+constraint s1 primary key(cid)
+);
+
+Task:
+create table Students(
+sid number(4),
+cid number(4),
+sname varchar(20) not null,
+email varchar(20),
+gender char(1),
+phone number(10) not null,
+dob date,
+doj timestamp,
+address varchar(100),
+constraint s2 primary key(sid),
+constraint s3 unique(email),
+constraint s4 check(length(phone)=10),
+constraint s5 foreign key(cid) references coursess1(cid)
+);
+
+insert into Students values (cid, dob) , (1234, DATE_(MM/YYYY/DD) , '12/2012/20')
+
+insert into SampleApril values(10, 9876543210, TO_DATE('06/04/2023', 'DD/MM/YYYY'), TO_TIMESTAMP('06/04/2023 11:19:00', 'DD/MM/YYYY HH24:MI:SS'));
+
+> To describe the structure of the table -- desc tablename
+
+> To insert values in the table
+
+create table dummy1(
+phone number(10) not null,
+dob date,
+doj timestamp,
+constraint dd1 primary key(phone)
+);
+
+insert into dummy1(phone, dob, doj) values(9876543210, to_date('
+12-02-2022', 'DD-MM-YYYY'), to_timestamp('12-02-2022 12:10:00','DD-MM-YYYY HH24:MI:SS'));
+
+To learn joins create the following data
+-----------------------------------------
+Table 2:  		StudentsJan1
+sID	sName	cID
+1	Steven	10
+2	Neena	20
+3	Lex	-
+
+Table 1: 		CoursesJan1
+cid	cName
+10	Java
+20	Selenium
+30	API
+
+
+SQL Joins
+==========
+
+Retrive the data from 2 more tables
+
+Inner join/equii join			: Should return matched records
+
+left join/left outer join		: Return the values from left side all records only and 						relevant right side table will gives the null
+
+right join/ right outer join	: Return the values from right side all records only and 					 	relevant left side table will give the null
+
+full join						: Return the  values from both the table
+
+cross join						: It is a cortition product, no of rows in 1st 								table joined with  no of rows of 2nd table
+
+
+create table CoursesDec24(
+cid number(4),
+cname varchar(20),
+constraint CD24 primary key(cid)
+);
+
+
+create table StudentsDec24(
+sid number(4),
+sname varchar(20),
+cid number(4),
+constraint SD24 primary key(sid)
+);
+
+
+insert into CoursesDec24 values (10, 'java');
+insert into CoursesDec24 values (20, 'sql');
+insert into CoursesDec24 values (30, 'plsql');
+
+Select * from CoursesDec24
+
+insert into StudentsDec24 values (1, 'vel', 20);
+insert into StudentsDec24 values (2, 'bala', 10);
+insert into StudentsDec24 values (3, 'mani', 30);
+insert into StudentsDec24 values (4, 'Ravi', NULL);
+
+Select * from StudentsDec24
+
+
+Select S.sname, C.cname from StudentsDec24 S inner join CoursesDec24 C on
+S.cid=C.cid;
+
+Select S.sname, C.cname from StudentsDec24 S left join CoursesDec24 C on
+S.cid=C.cid;
+
+Select S.sname, C.cname from StudentsDec24 S right join CoursesDec24 C on
+S.cid=C.cid;
+
+Select S.sname, C.cname from StudentsDec24 S full join CoursesDec24 C on
+S.cid=C.cid;
+
+Select S.sname, C.cname from StudentsDec24 S cross join CoursesDec24 C;
+
+
+JDBC:
+----
+Java Database Connectivity
+
+Step 1:
+------
+Loading the driver
+Class.forName()
+
+Step 2:
+------
+Create the connection
+
+Connection con=DriverManager.getConnection(url,user,password)
+
+Url : jdbc:oracle:thin:@localhost:1521:xe
+oracle    ---> Database name
+thin      ---> driver used
+@localhost --> Ip address where database is stored
+1521 ----------> Port number
+xe -----------> service provider
+Step 3:
+------
+Write a query
+
+String obj =query
+
+Step 4:
+------
+prepare statement
+
+Step 5:
+-------
+ExecuteQuery
+
+Step 6:
+--------
+Query Iteraation
+
+Step 7:
+--------
+driver close
+
+==================================================================================================
+Version Control System(VCS):
+============================
+A system which performs versioning, cloning and tracking is called as VCS.
+versioning - Maintaining the different version source code of an application
+cloning - Making a copy of the existing code
+Tracking - Tracking the changes made by different users.
+
+Two types of VCS
+i) CVCS - Centralized Version Control System
+ii) DVCS - Distributed Version Control System
+
+How to move the code from the Local Machine to the Remote Repository:
+=======================================================================
+Step 1: install GIT in the local machine
+	Google - Download GIT for Windows - Select the first link - Install
+
+Step 2: Open GITHUB website and create an account
+	
+Step 3: Open Eclipse and decide which project to be moved to the Remote Repository
+	Go to the location of the project
+
+Step 4: Verify GIT is installed properly
+	Open cmd  git --version
+
+Step 5: From the location of the project open GIT bash	
+	GIT bash - It is a command line tool which represents the VCS
+	RC from the location of project - Open GIT Bash - Click
+
+
+Step 6: Configure your GIT with GITHUB
+	git config --global user.email "abc@gmail.com"
+	git config --global user.name "username"
+
+Step 7: Intilize GIT into the project
+	git init
+
+Step 8: Move the code from the local machine to Staging Area
+	git add .
+
+Step 9: Move the code from the Staging Area to local repository
+	git commit -m "message"
+
+Step 10: Move the code from the Local repository to Remote Repository
+	 
+	10.1 Open GITHUB create a new repository and copy the URL
+	
+	git remote add origin url
+
+	git push -u origin master
+
+	
+git status - to know the current location or status of the file or code we are moving
+	
+git status - Red Color file name(Untracked files) - Local machine
+
+git status - Green Color file name(Tracked files) - Staging Area
+
+git status - Working Tree clean - Local Repository
+
+git status - Up to track with branch - Remote Repository
+
+
+How to pull the code from the Remote Repository to Local Machine:
+=================================================================
+Step 1: Open GITHUB and create branches.
+
+Step 2: Copy the repository URL after creating the branch.
+
+Step 3: Create a workspace (folder) in your local machine.
+
+Step 4: Open GITBash from the newly created folder
+
+	git clone repourl
+
+Step 5: Import the project from the folder to our IDE(Eclipse)
+
+Step 6: Switch the branch from the master to our working branch
+	git checkout branchname
+
+Step 7: push the code from the local machine to Remote branch 
+
+	master _____> QA________> Local Folder ________> Eclipse 
+			|			      |
+			|			      |
+		 <______|<____________________________ Work Completed
+			
+
+	      ________ Dev______>Local Folder_________>Eclipse
+			|				|
+			|				|
+		 <______|_______________________________Work Completed
+							
+
+Updating the code from a branch to master - Creating pull request.
+
+git pull -r
+
+How to resolve the Merge Conflicts:
+===================================
+Step 1: Use the command 
+	git pull origin master
+	
+	All the previous work(commits) done after creating the branch will be displayed in descending order.     
+
+Step 2: Arrange Head on top of the tail, remove the unwanted lines
+
+Step 3: Again push the code back to the branch
+
+======================================================================================================
+Xpath and its functions:
+========================
+
+i) Xpath with single attribute
+	Syntax: //tagName[@att='attValue']
+
+ii)Xpath with Multiple attributes
+	Syntax: //tagName[@att1='value1'][@att2='val2'].......[@attn='valn']
+
+iii) Xpath with text
+	Syntax: //tagName[text()='full text value']
+
+iv) Xpath with partial text
+	Syntax: //tagName[contains(text(),'partial text value')]
+
+v) Xpath with dynamic attribute value
+	Syntax: //tagName[contains(@att,'partial att value')]
+
+vi) Xpath with indexing
+	Syntax: (Any function of xpath)[index]
+
+vii) Xpath with unknown tagName
+	Syntax: //*[@att='value']
+		* - It represents all the tag name
+
+viii) Xpath with unknown attributeName
+	Syntax: //*[@*='value']
+
+ix) Xpath with AND Operator
+	Syntax: //tagName[@att1='value1' and @att2='value2']
+
+	Syntax: //tagName[@att1='value1' or @att2='value2']
+
+X) Xpath with starting function
+	Syntax: //tagName[starts-with(@att,'starting character of value')]
+
+
+Xpath Axes and Dynamic Xpath:
+============================
+
+Xpath Axes - Locating one element in reference to another element.
+
+Different relations - parent, child, ancestor, descendant, preceding-sibling, following-sibling
+
+Syntax: AnyFormofSourceXpath/relationToTarget::AnyFormofTargetXpath
+
+
+//input[@type='text']/ancestor::div/following-sibling::div[@class='_6ltg']/child::button
+
+===========================================================================
+Difference between Xpath & CssSelector:
+=======================================
+id, classname, name, linkedText, partialLinkedText, tagName - Primary Locators
+xpath, cssSelector - Customized Locators
+
+Xapth
+It can traverse both forward and backward
+Xpath is slow
+Css
+It can traverse only in forward 
+It is fast
+
+CSS Selector:
+=============
+i) Css with id
+	Syntax: tagName#idValue
+
+	Syntax: #idValue
+
+ii)Css with class
+	Syntax: tagName.classValue
+
+	Syntax: .classValue
+
+	Syntax: .c1.c2.c3
+
+iii)Css with AttributeName and value
+	Syntax: tagName[attName='attValue']
+
+	Syntax: tagName[att1='val1'][att2='val2']
+
+iv)Css with contains function
+	Syntax: tagName[att*='partial attribute value']
+
+v) Css with starting function
+	Syntax: tagName[att^='starting value']
+
+vi) Css with ending function
+	Syntax: tagName[att$='ending value']
+
+
+vii)Css with indexing
+	Syntax: Any form of css:nth-of-type(n)
+	
+	Syntax: Any form of css:first-of-type
+	
+	Syntax: Any form of css:last-of-type
+
+
+ix) Css with parent to child
+
+	Syntax: Any form of css(parent) > Any form of css(child)
+
+x) Css with preceding to following sibling	
+	Syntax: Any form of css(preceding) + Any form of css(following)
+
+=======================================================================================================
+	
+
+Enumeration, Iterator, List Iterator:
+=====================================
+* These are pre defined interfaces used to iterate the collection objects.
+
+Enumeration:
+------------
+	* It is an interface used to iterate Vector class in List.
+	* It contains two methods
+		a) hasMoreElements()	- it will check next element is present or not(Boolean)
+		b) nextElement()	- it will retrieve the next element
+
+	* to bring the enumeration
+		Syntax: vectorref.elements();  - Enumeration
+
+Iterator:
+----------
+	* It is an interface used to iterate both list and set
+	* So it is called as universal cursor.
+	* to bring the iterator
+		Syntax: list or setref.iterator(); - Iterator
+
+		a) hasNext() - it will check next element is present or not(Boolean)
+		b) next()	    - it will retrieve the next element
+
+List Iterator:
+-------------
+	* It is the only iterator that will traverse in forward direction and reverse direction
+	* But will act over only list
+	* to bring the list iterator
+		Syntax: listref.listIterator();  - ListIterator
+
+		a) hasNext() - it will check next element is present or not(Boolean)
+		b) next()	    - it will retrieve the next element
+		c) nextIndex()       - it will give next index value
+		d) previous()	    - it will retrieve the previous element
+		e) hasPrevious()   - it will check previous element is present or not(Boolean)
+		f) previousIndex()  - it will give previous index value
+=======================================================================================================
+
+Logical programs:
+=================
+i) Number based Program
+	a) Reverse the number
+	b) Check a given number is palindrome or not
+	c) Count of digits in given number
+	d) Sum of digits in given number
+	e) Prime number or not
+	f) Swap two number without using third variable
+	g) Swap two number with using third variable
+
+ii) Array based program
+	a) Arrange an array in asc/desc
+	b) nth max/ nth min
+	c) Remove the duplicates from array
+
+iii) String based program
+	a) Reverse the String
+	b) Palindrome String
+	c) Check occurance of character in a given string
+
+
+
+Reverse the  number:
+-------------------
+	int a = 123;	//1	a=123		a=12		a=1		a=0
+	int o = 0;	//2	o=0		o=3		o=32		o=321
+	while(a>0){	//3	123>0		12>0		1>0		0>0
+	int b = a/10;	//4	b=12		b=1		b=0
+	int c = a%10;	//5	c=3		c=2		c=1
+	o = c + (o*10);	//6	o=3		o=32		o=321
+	a =b;		//7	a=12		a=1		a=0
+	}
+Palindrome Number:
+------------------
+int a = 121;
+int o = 121;
+
+Given Number = Reversed Number(Palindrome)
+
+int a = 123;
+int o = 321;
+
+Given Number != Reversed Number(Non Palindrome)
+
+	int a = 123456;
+		int o = 0;
+		int temp = a;
+		int count = 0;
+		int sum = 0;
+		while(a>0) {
+			int b = a/10;
+			int c = a%10;
+			o = c+(o*10);
+			a = b;
+			count++;
+			sum = sum + c;
+		}
+		System.out.println(o);
+		if(temp == o) {
+			System.out.println("Palindrome Number");
+		}else {
+			System.out.println("Non Palindrome Number");
+		}
+		System.out.println("No of Digits "+count);
+		System.out.println("Sum of Digits "+ sum);
+
+
+
+Prime Number:
+-------------
+A number which is completely divisible by 1 and itself.
+
+int a = 5;
+int c1 = 0;
+	1     2   4
+for(int i=2; i<a; i++){
+		3
+	if(a%i==0){
+		c1++;
+		break;
+		}
+}
+if(c1==0){
+	System.out.println("Prime Number");
+	}
+else{
+	System.out.println("Non prime NUmber");
+}
+	
+1		2		3			4
+i=2		2<5					3
+i=3		3<5					4
+i=4		4<5					5
+i=5		5<5				
+
+
+Swap two numbers:
+================
+int a = 10;
+int b = 20;
+
+Using third Variable
+	int c = a+b;(c=30, a=10, b=20)
+	b = c-b;(c=30, a=10, b=10)
+	a = c-b;(c=30, a=20, b=10)
+
+Using third Variable
+	int c = a;(c=10, a=10, b=20)
+	a = b; (c=10, a=20, b=20)
+	b = c; (c=10, a=20, b=10)
+
+
+Without Using third Variable
+	a = a+b;(a=30, b=20)
+	b = a-b;(a=30, b=10)
+	a = a-b;(a=20, b=10)
+	
+Array Based Program:
+===================
+
+	int [] a = {5, 3, 2};
+
+		1	2        4
+	for(int i=0; i<a.length; i++){
+			3.1     3.2        3.4
+		for(int j=i+1; j<a.length; j++){
+				3.3
+			if(a[i]>a[j]){
+				int c = a[i];
+				a[i] = a[j];
+				a[j] = c;
+				}
+			}
+		}
+
+1		2		3.1		3.2		3.3		3.4		4
+i=0		0<3		j=1		1<3		{3,5,2}		j=2
+				j=2		2<3		{2,5,3}		j=3
+				j=3		3<3(inner loop terminated)			i=1
+
+i=1		1<3		j=2		2<3		{2,3,5}
+
+
+Remove Duplicates from the Array:
+==================================
+int [] a = {1, 1, 1, 2, 2, 3, 3};
+
+String based Program:
+====================
+String s = "java";
+String o = "";
+	//1             //2   //4
+for(int i=s.length()-1; i>=0; i--){
+//3
+o = o + s.charAt(i);
+}
+1			2			3			4
+int i=3			3>=0			o=a			i=2
+int i=2			2>=0			o=av			i=1
+int i=1			1>=0			o=ava			i=0
+int i=0			0>=0			o=avaj			i=-1
+int i=-1		-1>=0	
+
+Palindrome String:
+=================
+Reversed String = Original String
+
+Character Occurance:
+====================
+String s = "app";
+Map<Character, Integer> m = new LinkedHashMap();
+
+	1	2          6
+for(int i=0; i<s.length(); i++){
+	3
+char c = s.charAt(i);
+	4
+if(m.containsKey()){
+Integer d = m.get(c);
+m.put(c, d+1);
+}
+5
+else{
+m.put(c, 1);
+}
+}      
+
+a=1, p=1,p=2        
+
+1		2		3		4		5		6
+i=0		0<3		c=a		nil		a,1 		i=1
+i=1		1<3		c=p		nil		p,1 		i=2
+i=2		2<3		c=p		d=1
+						m.put(p,2)  
+
+JENKINS:
+========
+Prerequisite  - How to Run maven projects through cmd.
+
+Step 1: Create a Maven project
+
+Step 2: Add dependency (testng or cucumber)
+	Add script
+
+Step 3: In pom.xml file add maven surefire plugin and maven compiler plugin
+	maven surefire plugin
+	Google - download maven surefire plugin- First link - Usage - Copy from  build to build and paste on top of dependancies
+
+Step 4: In pom.xml file paste the maven compiler plugin
+	Google - Download maven compilerplugin - First link - Usage - Copy from plugin to plugin and paste inside the plugins tag of maven surefire plugin
+
+Step 5: inside the maven surefire plugin under <version> 
+	Add <configurarion>
+	Add <suiteXmlFiles>
+	Add <suiteXmlFile>testng.xml
+
+
+   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+          <configuration>
+          <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+          <configuration>
+            <!-- put your configurations here -->
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+
+Step 6: Go to the location of the project
+
+Step 7: Open cmd from that location
+
+Step 8: mvn compile
+	mvn clean test
+
+Step 9: Download and install Jenkins
+	Google - Download Jenkins - Select the first link - .war file - click & Download
+
+Step 10: Go to the location of download	 open cmd from that location
+	 java -jar jenkins.war          - Jenkins is fully up and running
+
+	or
+
+	java -jar Jenkins.war --httpPort=8081
+
+
+Step 11: Open Browser - enter the url
+	  localhost:8080 - first command
+
+	  localhost:8081  - second command
+
+	Jenkins Home page -password - C Drive - Users - PC Name - .Jenkins - secrets - intialAdminPassword - Open - Copy the password and paste
+
+Step 12: Create an account in Jenkins - Own username and password- Logout and login again with username and password
+
+Step 12.1: Cofigure the environement
+	  Manage Jenkins  - Global tool configuration - 
+	 JDK - JDK installations - Add JDK - Add JAVA_HOME, and Java path
+	 Maven - Maven Installations - Add Maven - Add MAVEN_HOME, and Maven path
+
+Step 13: Create a new project in jenkins'
+	New Item - FreeStyle select - Name of the project - Click Ok
+
+Step 14: Go to Build - Select Execute Windows Batch command 
+	cd location of the project
+	mvn clean test
+
+Step 15: Configure time of execution of the project(Schedule)
+	* * * * *  - Crone Expressions
+	|minute of the hour(0-59)
+	  |hour of the day(0-23)
+	     |day of the month(1-31)
+		|month of year(1-12)
+		  |day of week(0-6)
+
+
+	36 10 12 3 3
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

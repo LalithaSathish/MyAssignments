@@ -1,0 +1,11 @@
+WebElement element=driver.findelement(By.id("id"));
+
+Action a=new Action(driver);
+a.contentClick(element).perform();
+
+
+Java Programme to add the sum of digits in string - AB1C5D3E11F 
+
+Move all 0's to the end of the String 23004567
+
+

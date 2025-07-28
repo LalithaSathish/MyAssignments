@@ -1,0 +1,64 @@
+When asked "Explain about your framework" in a testing interview (especially for Selenium + TestNG or similar), you should focus on:
+
+✅ 1. Framework Type
+Start by mentioning the type of framework you built or worked on:
+
+"I have worked on a Hybrid framework that combines features of Data-Driven, Keyword-Driven, and Modular frameworks using Selenium with TestNG and Java."
+
+✅ 2. Tools & Technologies Used
+Mention the tools used:
+
+"The framework is built using Selenium WebDriver, Java, TestNG as the test runner, Apache POI for Excel data handling, Log4j for logging, and Extent Reports for reporting. We use Maven as the build tool and Git for version control."
+
+✅ 3. Framework Structure / Components
+Describe the key folders or packages:
+
+"The framework is designed with the following structure:
+
+Base Class – to initialize WebDriver and browser setup.
+
+Utilities Package – for reusable utilities like taking screenshots, reading data from Excel, handling alerts, etc.
+
+Page Object Model (POM) – each web page has a corresponding class that holds the locators and methods.
+
+Test Classes – these contain the actual test cases written using TestNG.
+
+Test Data – stored in Excel sheets or JSON files.
+
+Listeners – to capture test execution status and generate reports."
+
+✅ 4. Execution & Reporting
+Explain how tests are run and reported:
+
+"Test execution is handled by TestNG XML where we define groups, priorities, and parallel execution. Reports are generated using Extent Reports, and we also have log files generated using Log4j."
+
+✅ 5. CI/CD (if applicable)
+If you've used Jenkins or similar:
+
+"Our framework is integrated with Jenkins for continuous execution. Whenever we commit code in Git, Jenkins picks it up and runs the suite automatically."
+
+✅ 6. Scalability & Maintenance
+Highlight any best practices:
+
+"The framework is designed to be scalable, so we can easily add new test cases without modifying existing ones. It's maintainable due to clear separation of test logic and test data using POM and utility classes."
+
+Sample 1-Line Summary:
+"Overall, it's a modular, reusable, and maintainable framework built for automation testing using Selenium WebDriver, Java, and TestNG."
+
+Would you like me to customize this answer based on your exact framework (e.g., if you're using Python, Cucumber, etc.)?
+
+
+
+
+
+
+
+
+
+Ask ChatGPT
+
+
+
+Tools
+
+

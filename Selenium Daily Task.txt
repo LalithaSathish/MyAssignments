@@ -1,0 +1,1000 @@
+SELENIUM
+--------
+DAY1
+--------
+1.Introduction to selenium
+2.Download jar file and drivers
+3.Browser Launch
+
+QUESTIONS(Theory)
+-----------------
+1.What is Automation Testing and benefits?
+2.Why should Selenium be selected as a test tool?
+3.What is Selenium? What are the different Selenium components?
+4.What is the difference between Selenium IDE, Selenium RC, and WebDriver?
+5.What is the latest version of selenium jar file and how you will configure selenium jar file    with eclipse?
+6.Can Google Chrome be supported by Selenium IDE?
+7.What are the different browsers supported by selenium?
+8.What is the Classname,driver name for the below browsers,
+     1.Firefox browser
+     2.Chrome browser
+     3.IE
+     4.safari browser
+     5.Opera browser
+9.What is the WebDriver and WebDriver is class or interface?
+10.What is the method name to launch the url?
+11.Method names to get the title and current URL?
+12.What is the difference between close() and quit()?
+
+QUESTIONS(practical)
+----------------------
+1.Launch the below URL's in firefox browser:
+-------------------------------------------
+	1.Greens technologys - http://www.greenstechnologys.com/
+	2.Facebook - https://www.facebook.com/
+        3.Amazon - https://www.amazon.in
+	4.Greens technologys-http://greenstech.in/selenium-course-content.html
+
+2.Launch the below URL's in chrome browser:
+------------------------------------------
+	1.Greens technologys - http://www.greenstechnologys.com/
+        2.Gmail - http://gmail.com/
+	3.Flipkart - http://www.flipkart.com/
+	4.Greens technology-http://greenstech.in/selenium-course-content.html
+
+3.Launch the below URL's in IE browser:
+--------------------------------------
+	1.Greens technologys - http://www.greenstechnologys.com/
+	2.DemoQa Registration http://demo.automationtesting.in/Register.html
+	3.Greens technologys - http://www.greenstechnologys.com/
+        4.Greens technologys- http://greenstech.in/selenium-course-content.html
+
+
+DAY2
+--------
+Locators
+
+sendKeys
+
+QUESTIONS(Theory)
+------------------
+1.What are the locators available in selenium?
+2.which locator is faster in selenium?
+3.How will you find the locators in selenium? write a code for it?
+4.Explain about findElement & findElements?
+5.Different between findElement and FindElements?
+6.What is the return type of findElement and findElements?
+7.In which class all the locator methods are available?
+8.What is method to  insert a value in textbox?
+9.Write a code for inserting value in textbox?
+10.While finding the locators index will start from 0 or 1?
+11.How will you click a button in webpages?
+12.WebElement is a interface or class?
+  
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : https://www.facebook.com/ 
+
+NOTE: Enter Email or Phone and Password.
+
+QUESTION 2
+----------
+URL : https://www.redbus.in/ 
+
+NOTE: Enter from and to textbox.
+
+QUESTION 3
+----------
+URL : https://www.google.com/
+
+NOTE: Enter GreensTechnology. 
+          
+
+QUESTION 6
+----------
+URL : https://www.swiggy.com/
+
+NOTE: Enter the location.
+
+QUESTION 7
+----------
+URL :https://www.snapdeal.com/login
+
+NOTE: Enter mobile number/email.
+
+QUESTION 10
+-----------
+URL : http://adactinhotelapp.com/
+
+NOTE: Enter Email or Phone and Password.
+
+
+DAY 3
+---------
+1.Locator(xpath)
+2.Radio button,checkbox, Button
+
+QUESTIONS(Theory)
+-----------------
+1.What are the different types of xpath?
+2.What is xpath? Why we are going for xpath?
+3.What are the Types of xpath?
+4.What is the difference between Absolute xpath and Relative xpath?
+5.What are the differenece between / and // ?
+6.What is the difference between Radio and CheckBox button?
+7.What is the method used to perform click?
+8.What are the xpath functions?
+9.How will you select a female Radio Button and write a code for it ?
+10.Write a code for selecting a Radio Button and  CheckBox button click ?
+11.What are the methods available in xpath?
+ 
+ 
+QUESTIONS-(Practical)
+--------------------
+QUESTION 1
+-----------
+URL : https://www.amazon.in/
+
+NOTE: Click start here. Enter iphone and search
+
+QUESTION 2
+-----------
+URL : https://www.facebook.com/
+
+NOTE: Enter email and password and click login(by using xpath locator).
+
+QUESTION 3
+-----------
+URL : http://demo.automationtesting.in/Register.html
+
+NOTE: Give details and register the form.
+
+QUESTION 5
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click interview question +.
+      Click cts  interview question
+
+QUESTION 6
+----------
+URL : https://www.redbus.in/
+
+NOTE: Click ^[opposite of this] and  signin/signup 
+      Enter Mobilenumber and click Generate OTP
+
+QUESTION 7
+----------
+URL : https://www.cleartrip.com/trains
+
+NOTE: Enter From ,TO  and click search trains
+
+QUESTION 8
+-----------
+URL :http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Model Reume + and click Resume Model 1
+
+QUESTION 9
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Click Login and Entere Username password 
+
+QUESTION 10
+-----------
+URL : https://www.amazon.in/
+
+NOTE: Click any  product and click search
+
+QUESTION 11
+-----------
+URL : https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp
+
+NOTE: Give details and register the form.
+
+QUESTION 12
+-----------
+URL : https://www.snapdeal.com/
+
+NOTE: Click signin and click new register and enter mobile number abd click continue.
+
+QUESTION 13
+-----------
+URL : https://www.myntra.com/register?referer=https://www.myntra.com/
+
+NOTE: Enter Mobile number and click continue
+
+
+QUESTION 14
+------------
+URL : https://www.swiggy.com/
+
+NOTE: Click sign up and Give details and register the form.
+
+
+DAY4
+------------
+Xpath contains,text
+getText();
+getAttribute();
+
+QUESTIONS(Theory)
+-----------------
+1.How to print a paragraph from webpage?
+2.What are the methods to get and print the text from webpage?
+3.What is the purpose of getText() and getAttribute() ?
+4.What is the return type of getText() and getAttribute() ?
+5.In which interface  getText() and getAttribute() is available?
+6.What are the difference between getText() and getAttribute()?
+7.Whether it is possible to get the text from webpage without using getText()?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : http://www.greenstechnologys.com 
+
+NOTE: Print Greens Technologys Software Training Centers in Chennai
+
+QUESTION 2
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Print the Velachery branch address
+
+QUESTION 3
+----------
+URL : http://www.greenstechnologys.com/
+
+NOTE: Print the paragraph starts with Greens Technology
+
+QUESTION 4
+----------
+URL : https://www.facebook.com/ 
+
+NOTE: Print the email and password which was entered by user 
+
+QUESTION  6
+------------
+URL : http://adactinhotelapp.com/
+
+NOTE: Print the UserName and Password that you are entered.
+
+QUESTION 7
+-----------
+URL : https://www.snapdeal.com/ 
+
+NOTE: Search any product and click 1st product
+
+
+QUESTION 8
+-----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Search any product and click 1st product
+
+
+QUESTION 9
+-----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Click login and enter User name password
+      Print the details you are given.
+
+QUESTION 10
+-----------
+URL : https://www.shopclues.com/wholesale.html 
+
+NOTE: Search any product and click 1st product
+
+
+
+DAY 5
+---------------
+Actions(mouseOver action,drag and drop)
+
+QUESTIONS(Theory)
+-----------------
+1.What is MouseOverAction?
+2.Write a code to perform MouseOverAction?
+3.Whether Action is a class or Interface?
+4.How will you perform Drag and drop?
+5.what is the use of the Action class?
+6.What is the purpose of Drag and Drop?
+7.In which class dragAndDrop method is available?
+8.Why we use .perform()?
+9.What is the purpose of moveToElement()? where t is used?
+10.In which  class moveToElement() is present?
+11.How will you perform  MouseOver action ?
+12.What is the difference between moveToElement() & switchTo()?
+
+QUESTIONS-(Practical)
+--------------------
+QUESTION 1
+----------
+URL : http://demo.guru99.com/test/drag_drop.html 
+
+NOTE: Drag and drop  bank  in Account ,5000 in amount  at debited side 
+      Drag and drop  sales in Account ,5000 in amount  at credited side  
+
+QUESTION 3
+----------
+URL : http://www.flipkart.com
+
+NOTE: Home & Furniture is first mouseover 
+      Click Bath Towels and print any product name 
+
+QUESTION 4
+----------
+URL : https://www.shopclues.com/wholesale.html
+ 
+NOTE: Mobile and electronics is first mouseover 
+      Click Smart Phones range Rs5001 - Rs10000
+
+QUESTION 5
+----------
+URL : https://www.shopclues.com/wholesale.html 
+ 
+NOTE: Sports&more  is first mouseover
+      Click weights grainers 
+      
+QUESTION 6 
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Course is first mouseover
+      Software testing training is second mouseover  
+      Click selenium training 
+
+
+QUESTION 7
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Courses is first mouseover
+      Oracle training is second mouseover
+      Click Oracle sql training
+
+QUESTION 8
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Courses  is first mouseover
+      DataWarehouse training is second mouse over
+      click microstategy training.
+
+QUESTION 9
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Courses  is first mouseover
+      RPA is second mouseover
+      Click Blue prism Certification training
+
+QUESTION 10
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Courses is first mouseover
+      Data Warehousing is second mouseover
+
+
+QUESTION 11
+-----------
+URL : https://www.homedepot.com/
+
+NOTE: Alldepartment  is first mouseover
+      Heating and cooling  is second  mouseover
+      Air conditioners is third mouseover 
+      Click portable air conditioners.
+
+QUESTION 12
+-----------
+URL : https://www.homedepot.com/ 
+
+NOTE: All department is first mouseover 
+      Paint is second mouseover
+      Interior painting is third mouseover
+      Click celling paint.
+
+QUESTION 13
+-----------
+URL :  https://www.snapdeal.com/
+
+NOTE:  Mobile & Tablets is first mouseover
+       Click newly lanuch covers.
+
+QUESTION 14
+-----------
+URL : https://www.snapdeal.com/
+
+NOTE: Women's Fashion is first mouseover
+      Click footwear->click heals.
+
+QUESTION 15
+-----------
+URL : https://www.amazon.in/
+
+NOTE: Signin is first mouseover
+      Click Register
+      Give details for Register 
+
+QUESTON 16
+----------
+URL : https://www.amazon.in/
+
+NOTE: signin is a first mouseover
+      Click SD Cash
+
+QUESTION 17
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: womens is mouseover
+      Click flat slipper
+
+QUESTION 18
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Baby&Kids is mouseover
+      Click Remote Control Toys
+
+
+QUESTION 19
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Electronics is mouseover
+      Click Realme
+      Click 1st Product name
+
+QUESTION 20
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Tvs & Appliances  is mouseover
+      Click Mi
+      Click 1st Product name
+
+DAY6
+----
+Robot class
+contextClick
+doubleClick
+
+QUESTIONS(Theory)
+-------------------
+1.How will you Perform rightClick?
+2.How will you perform doubleClick?
+3.Write a code  for Robot class?
+4.In which package Robot class is available? 
+5.what exception Robot class throws?
+6.What is the method to perform rightClick?
+7.What is the method to perform doubleClick?
+8.Write a code to copy a text using Robot class?
+9.Write a code to paste a text using Robot class?
+10.In which  class contextClick() is available?
+11.In which class  doubleClick() is available?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : https://www.facebook.com/
+
+NOTE: Type email in email textbox and cut  the email using Robot class 
+      Paste that email in password text  using Robot class 
+
+
+QUESTION 3
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click interview question and Right click cts interview question and Select open link in new window
+
+QUESTION 4
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Right Click Framework Test Papers  and Select Inspect
+
+QUESTION 5
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Model Resume and  rightClick resume model 4 the page and click save as.
+
+QUESTION 6
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Right Click RPA [ below Top Selenium Trends In 2020] and click Inspect
+
+QUESTION 7
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Selenium Test Papaers Right Click Day 6 Robot and select Inspect
+
+Question 8
+----------
+URL : https://www.flipkart.com/
+
+NOTE: Click login
+      Type a  name in email textbox and cut using (control +c) and paste in password using (control+v)
+
+QUESTION 9
+------------
+URL : https://www.amazon.in/
+
+NOTE: Click login and type a  email in email textbox and select email and right click and click cut 
+
+QUESTION 10
+-----------
+URL : https://www.snapdeal.com/offers/quirky
+
+NOTE: Select any item and then right click and press open in a new window
+
+QUESTION 11
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Select any item and then right click and press Save link as
+
+
+
+DAY7
+----
+Screenshot
+scrollup and scrolldown
+
+QUESTIONS(Theory)
+-----------------
+1.How will you take a screenshot in selenium?
+2.For what reason we have to take screenshot?
+3.Whether TakesScreenshot is a class or interface?
+4.In what place the screenShot will store  in default?
+5.Write a code to perform Screenshot?
+6.Whether FileUtils is a class or interface?
+7.Supoose we want to change the location of the Screenshot What can we do?
+8.What is javaScript?
+9.Write a code for the scrollUp and scrollDown?
+10.In which method scrollUp and scrollDown take place?
+11.Whether JavaScript is a class or interface?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : http://www.greenstechnologys.com/
+
+NOTE: Take screenshot of homepage.
+
+QUESTION 2
+----------
+URL : http://toolsqa.com/
+
+NOTE: Scrolldown till "Recent Articles".
+
+QUESTION 3
+-----------
+URL : http://toolsqa.com/
+
+NOTE: Scrolldown till "Selenium Training Benefit" and print the word "Selenium Training Benefit"
+
+QUESTION 4
+----------
+URL : http://www.greenstechnologys.com/
+
+NOTE: Scroll Down till "Greens technology Perumbakkam. address "and Take  screenshot 
+
+QUESTION 5
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: ScrollDown till "job opening" and Take the screenshot and  scroll up Online Classroom
+
+QUESTION 6
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Scrolldown till "Top Selenium Trends In 2020" and takes Screenshot 
+
+QUESTION 7
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click interviews question take the screenshot
+
+QUESTION 8
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: In  CoreJava TestPaper Take the Screenshot 
+
+QUESTION  9
+------------
+URL : https://www.flipkart.com/
+
+NOTE: Search iphone and take the screenshot.
+
+QUESTION 10
+-----------
+URL : https://www.amazon.in/
+
+NOTE: Search motorolo and   take the screenshot.
+
+
+QUESTION  9
+------------
+URL : https://www.flipkart.com/
+
+NOTE: Mouse Over Womens and take the screenshot.
+
+QUESTION 11
+-----------
+URL : https://www.flipkart.com/
+
+NOTE: Mouse Over Kids & Baby  and Take the screenshot
+              
+QUESTION 12
+-----------
+URL : https://www.snapdeal.com/
+
+NOTE: search HP laptop and take the screenshot .
+              
+
+DAY8
+----
+Alerts
+Frames
+
+QUESTIONS(Theory)
+-----------------
+1.What is an Alert?
+2.What are the types of Alert?
+3.Write a code to perform Alert?
+4.What can we do to click Ok button in alert?
+5.What can we do to click Cancel button in alert?
+6.Whether alert is an interface or class?
+7.What is mean by frames?
+8.What are the arguments we pass on frames?
+9.Write a code for switching the alert?
+10.Write a code to switch frames?
+11.What is the method switch the alert and frame?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1:
+----------
+URL : http://demo.automationtesting.in/Alerts.html
+
+NOTE: Click button to display an alert box and click ok button
+
+QUESTION 2
+----------
+URL : http://demo.automationtesting.in/Alerts.html
+
+NOTE: Click Alert with ok & cancel button and Click button to display an confirm box Perform confirm alert.
+
+QUESTION 3
+----------
+URL : http://demo.automationtesting.in/Alerts.html
+
+NOTE: Click Alert with textBox button and Click button to demonstrate an prompt box Perform prompt alert.
+
+QUESTION 4
+----------
+URL : https://netbanking.hdfcbank.com/netbanking/?_ga=2.176378149.1819882415.1533883212-608727520.1532670997
+
+NOTE: Click continue without enter the user id and handle popup.
+
+QUESTION 5
+----------
+URL : https://netbanking.canarabank.in/entry/ENULogin.jsp
+
+NOTE: Click sign in without enter the user id and print text appear and handle popup.
+
+QUESTION 6
+----------
+URL : https://retail.onlinesbi.com/retail/login.htm
+
+NOTE: Click Continue To Login and click Login without enter the user id.
+
+QUESTION 7
+----------
+URL : https://netbanking.hdfcbank.com/netbanking/
+
+NOTE: Enter the userId,click continue.Enter password.
+
+QUESTION 8
+----------
+URL : https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=ICI
+
+NOTE: Enter the userId password.
+      Click login button
+
+
+DAY9
+---------
+Drop Down
+
+QUESTIONS(Theory)
+-----------------
+1.What is the purpose of DropDown?
+2.How will you perform DropDown?
+3.What are the ways to select DropDown options?
+4.Whether Select is a interface or class?
+5.Write a code to print all the options in DropDown?
+6.Can we select multiple values in DropDown?
+7.How will select multiple values in DropDown?
+8.What are the methods available in Select class?
+9.can we deselect the options in DropDown?
+10.Write a code to print selected options in DropDown?
+11.Write a code to deselect the selected options in DropDown?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : http://demoqa.com/automation-practice-form/
+
+NOTE: print all the even option in State and City
+
+QUESTION 2
+----------
+URL : http://demoqa.com/automation-practice-form/
+
+NOTE: print all the odd option in State and City
+
+QUESTION 3
+----------
+URL : https://www.facebook.com/
+
+NOTE: Print all the options in year using getAttirubute() method
+
+QUESTION 4
+----------
+URL : https://www.facebook.com/
+
+NOTE: Print all the options in month using getText() method
+
+QUESTION 5
+-----------
+URL : https://www.facebook.com/
+
+NOTE: print the even dates
+
+QUESTION 6
+-----------
+URL : http://demo.guru99.com/test/newtours/register.php
+
+NOTE: print all the option of country using getText() methods
+
+QUESTION 7
+-----------
+URL : http://demo.guru99.com/test/newtours/register.php
+
+NOTE: print all the option of country using getAttribute() method
+      Register Form
+
+QUESTION 8
+------------
+URL : http://adactinhotelapp.com/
+
+NOTE: Book room and print order no.
+
+
+QUESTION 9
+-----------
+URL : http://adactinhotelapp.com/
+
+NOTE: print all the option in Room Type available.
+
+QUESTION 10
+-----------
+URL : http://adactinhotelapp.com/
+
+NOTE: print all the option in Location available.
+
+QUESTION 11
+-----------
+URL : http://adactin.com/HotelApp/
+
+NOTE: print No of option available in Adults per Room
+
+QUESTION 12
+-----------
+URL : http://output.jsbin.com/osebed/2
+
+NOTE: Select Even Option availble in fruits
+      Find out number of option not selected
+
+QUESTION 13
+-----------
+URL : http://output.jsbin.com/osebed/2
+
+NOTE: Select All availble in fruits
+      Print first selected option 
+
+
+DAY10
+------------
+Windows Handling
+
+QUESTIONS(Theroy)
+-----------------
+1.What is the purpose of windows Handling?
+2.Write a code to perform  windows Handling?
+3.Which method is used to get parent window?
+4.Which method is used to get child windows?
+5.Write a code to switch from parent window to child window?
+6.In which order the windows order will arrange?
+7.Write a code to return to your parent window?
+8.What is the return type of getWindowHandles()?
+9.What is the return type of getWindowHandle()?
+10.Write a code to switch to 8 th child window?
+11.Write a code to switch to 8 th child window without using any for loop?
+12.Write a code to switch multiple windows?
+
+QUESTIONS(Practical)
+--------------------
+QUESTION 1
+----------
+URL : https://www.amazon.com/
+
+NOTE: Search iphones X and right click 1st phone and give open in new window 
+      print cost of product
+
+QUESTION 2
+----------
+URL : https://www.snapdeal.com/ 
+
+NOTE: Search iphones 7 and click 1st phone 
+      add it to cart.
+      print the you pay cost displayed.
+
+QUESTION 3
+----------
+URL : https://www.homedepot.com/
+
+NOTE: Search celling fan 
+      click 1st fan and click the remote control included
+
+QUESTION 4
+----------
+URL : http://www.greenstechnologys.com/python-training.html
+
+NOTE: Click Selenium Test Papers and click Selenium Day10Task 
+      Click Windows Handling and print 1 question 
+
+QUESTION 5
+----------
+URL :  http://www.greenstechnologys.com/
+
+NOTE: Mouse Over Course And click python 
+      Right Click Explore Curriculum and click open in new window
+
+QUESTION 6
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Junit in Framework Test Paper
+      print 1st Question in practical
+
+QUESTION 7
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Control Statement in Core Java Test Paper
+      print 1st Question in Theorey
+
+QUESTION 8
+----------
+URL : https://www.snapdeal.com/ 
+
+NOTE: Search hand sanitizer and click any hand sanitizer
+      add it to cart
+
+QUESTION 9
+----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Search redmi phone and click any phone
+      print price amount
+
+QUESTION 10
+----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Search mask and click any mask
+      Enter delivery pincode
+
+QUESTION 11
+----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Search hp laptop and click 1st hp laptop
+      print cost of laptop
+
+QUESTION 12
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click WindowsHandling in selenium Java Test Paper
+      print question 13 in practical
+
+QUESTION 14
+----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Click Testng in Framework Test Paper
+      print 4th  Question in practical
+
+
+DAY12:
+-----
+JavaScript
+
+QUESTIONS(Theory)
+------------------
+1.What is mean by JavaScript?
+2.Whether JavaScript is a class or Interface?
+3.What is the method available to run the Javascript?
+4.Write a code to click a button using JavaScript?
+5.Write a code to insert a value in textBox using JavaScript?
+6.What method is used to get the font size of the WebElement in a webpage?
+7.What method is used to get the Color of the WebElement in a webpage? 
+8.Write a code to highlight the WebElement in a webpage?
+9.Write a code to get the InnerText and Title of a webpage using Javascript?
+10.Write a code to perform scrollUp in a webpage using Javascript?
+11.Write a code to perform scrolldown in a webpage using Javascript?
+
+QUESTIONS(Practical)
+-------------------
+QUESTION 1
+-----------
+URL : http://www.greenstechnologys.com/
+
+NOTE: Go to down of the webpage using scrolldown and print the line 
+"Greens Technologies Porur
+149, 1C/1D, 1st Floor,
+Opp to DLF IT Park,
+Ramapuram,
+Chennai - 600089."
+
+QUESTION 2
+-----------
+URL : http://toolsqa.com/
+
+NOTE: Go to "Share this page" using scrolldown and again "Latest Tutorials" using scrollup.
+
+QUESTION 3
+-----------
+URL : http://greenstech.in/selenium-course-content.html
+
+NOTE: Scroll Till Framework Test Papers
+
+
+QUESTION 4
+-----------
+URL : https://www.facebook.com/
+
+NOTE: Enter the email & password and click login button using JavaScript.
+
+QUESTION 5
+-----------
+URL : http://adactinhotelapp.com/
+
+NOTE: Enter the username & password and click login button using JavaScript.
+
+QUESTION 6
+-----------
+URL : https://www.flipkart.com/
+NOTE: Enter the email & password and click login button using JavaScript.
+      print the user entered input
