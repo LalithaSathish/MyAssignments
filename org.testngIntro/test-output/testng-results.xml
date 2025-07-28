@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-11T17:45:59 IST" name="Default suite" finished-at="2025-06-11T17:47:30 IST" duration-ms="90586">
+    <groups>
+    </groups>
+    <test started-at="2025-06-11T17:45:59 IST" name="Default test" finished-at="2025-06-11T17:47:30 IST" duration-ms="90586">
+      <class name="org.testngIntro.Adactinhotelapp_DataProvider">
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testngIntro.Adactinhotelapp_DataProvider@2b30a42c]" started-at="2025-06-11T17:45:59 IST" name="login" data-provider="Datas" finished-at="2025-06-11T17:46:22 IST" duration-ms="22212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lalitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Medavakkam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testngIntro.Adactinhotelapp_DataProvider@2b30a42c]" started-at="2025-06-11T17:46:22 IST" name="login" data-provider="Datas" finished-at="2025-06-11T17:46:38 IST" duration-ms="16575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dhiyazhini]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Medavakkam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testngIntro.Adactinhotelapp_DataProvider@2b30a42c]" started-at="2025-06-11T17:46:38 IST" name="login" data-provider="Datas" finished-at="2025-06-11T17:46:55 IST" duration-ms="16572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Karnan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Medavakkam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testngIntro.Adactinhotelapp_DataProvider@2b30a42c]" started-at="2025-06-11T17:46:55 IST" name="login" data-provider="Datas" finished-at="2025-06-11T17:47:13 IST" duration-ms="17968" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Medavakkam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testngIntro.Adactinhotelapp_DataProvider@2b30a42c]" started-at="2025-06-11T17:47:13 IST" name="login" data-provider="Datas" finished-at="2025-06-11T17:47:30 IST" duration-ms="17148" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Loki]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Medavakkam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- org.testngIntro.Adactinhotelapp_DataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
